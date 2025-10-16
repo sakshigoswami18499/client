@@ -17,7 +17,8 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/register", formData);
+      const API_URL = process.env.REACT_APP_API_URL;
+      await axios.post(`${API_URL}/register`, formData);
       alert("✅ Registration saved successfully!");
       setFormData({ name: "", email: "", phone: "", event: "" });
     } catch (error) {
