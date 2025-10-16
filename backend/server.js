@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:3000", "https://eveease.vercel.app"],
+  origin: ["http://localhost:3000", "https://client-one-black.vercel.app/"],
 }));
 app.use(express.json());
 
